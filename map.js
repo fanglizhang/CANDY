@@ -194,7 +194,7 @@ map.on('click', function(e) {
         for (i=0; i<layers.length; i++) {
 
             // add a button for each layer
-            $("#layers-control").append("<a href='#' class='active button-default' id='" + layers[i][0] + "'>" + layers[i][1] + "</a>"); // see http://api.jquery.com/append/
+            $("#layers-control").append("<a href='#' class='active button-default' id='" + layers[i][0] + "'>" + "<p></p>"  + "<p></p>" + layers[i][1] + "</a>"); // see http://api.jquery.com/append/
         }
 
         // show/hide layers when button is clicked
