@@ -181,10 +181,10 @@ map.on('click', function(e) {
         // [layerMachineName, layerDisplayName]
         // layerMachineName is the layer name as written in your Mapbox Studio map layers panel
         // layerDisplayName is the way you want the layer's name to appear in the layers control on the website
-        ['candy-ferrero', 'ferrero'],                      // layers[0]
-        ['candy-hersheys', 'hersheys'], 
-        ['candy-bear', 'bear'],
-        ['candy-rabbit', 'rabbit'],
+        ['candy-ferrero', 'FERRERO'],                      // layers[0]
+        ['candy-hersheys', 'HERSHEY\'s'], 
+        ['candy-bear', 'GUMMY BEAR'],
+        ['candy-rabbit', 'WHITE RABBIT'],
     ]; 
 
     // functions to perform when map loads
@@ -339,7 +339,7 @@ map.on('click', function(e) {
             displayname: "GUMMY BEAR",
             description: "How many students graduated this spring at A-school?",
             imagepath: "img/Bear_2.svg",
-            bearing: 20,
+            bearing: 0,
             center: [ -78.488,38.025],
             zoom: 18.46,
             pitch: 0
