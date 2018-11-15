@@ -342,7 +342,7 @@ map.on('click', function(e) {
             bearing: 20,
             center: [ -78.488,38.025],
             zoom: 18.46,
-            pitch: 50
+            pitch: 0
         },
         'white-rabbit': {
             displayname: "WHITE RABBIT",
@@ -351,7 +351,7 @@ map.on('click', function(e) {
             bearing: 0,
             center: [-78.496,38.037],
             zoom: 18.46,
-            pitch: 25
+            pitch: 0
         }
     };
 
