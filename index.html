@@ -12,154 +12,153 @@
   <!-- Link to Mapbox GL JS css stylesheet -->  
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
 
-  <!-- Link to our custom stylesheet -->  
-  <link rel="stylesheet" href="map-floating.css">
+    <!-- Link to d3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
+    <!-- Link to fontawesome -->
+    <script src="https://use.fontawesome.com/0ae7c1f7c9.js"></script>
+
+  <!-- Link to our custom stylesheet -->  
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    
 </head>
 
 <body>
+    
   
+  <div id="homepageBackground">
+    
+   <p class='homepage-title'>C<img src="img/Bear_4.png" 
+         style="width:10%; " >
+    NDY</p>
+    <div class='modal-body'><p>Join <strong>CANDY</strong> and make friends in real life!</p><p>Try to collect a candy by answering its question. </p><p>Then you will get the clue to find the real candy hidden by another <strong>CANDY</strong> fans!</p> Click on the <strong>Gummy Bear</strong> above to start your candy hunt.<p>.................................</p> <p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='http://www.charlottesville.org/online-services/maps-and-gis-data'>City of Charlottesville</a></p><p>Wanna make CANDY better? Please let me know!  <a href='mailto:fz2vf@virginia.edu'>Fangli Zhang</a></p></div>
+    </div>
+    
+<!--    -----------------------candyChart--------------------->
+<!--
+    <div id="candyChart">
+		<h1>Candy Jar</h1>
+		
+		<svg id="bar-chart"></svg>
+
+	</div>
+-->
   <!-- Map sidebar --> 
+    
+    <img id="candy-jar" src="img/Candy-jar.svg" style="width:20%">
+    
+    
   <div id="sidebar">
     <div id="chapters">
       
     </div>
 </div>
   <!-- About this map button -->
-  <button id="about" class='button-default'>About CANDY</button>
+  
+    
+<!--  <button id="about" class='button-default'>CANDY JAR</button>-->
   
   <!-- The map will be added to this div by javascript --> 
   <div id="map"></div>
   
   <!-- A modal, hidden by default in our css, which provides info about this project when shown -->
-  <div class='modal'>
+  <div class='modal' >
+      <img src="img/cloud-01.svg" style="width:100%; top:0;left:10%;">
+     
+      
+<!--      <h2 class='modal-title'>CANDY JAR</h2>-->
+      <div id="candyChart">
+		
+		
+		<svg id="bar-chart"></svg>
+
+	  </div>
     
-    <h2 class='modal-title'>About CANDY</h2>
     
-    <div class='modal-body'><p>Join CANDY and make friends in real life!</p><p>Try to collect a candy by answering its question. Then you will get the clue to find the real candy hidden by another CANDY fans!</p> <p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='http://www.charlottesville.org/online-services/maps-and-gis-data'>City of Charlottesville</a></p><p>Wanna make CANDY better? Please let me know! >> <a href='mailto:fz2vf@virginia.edu'>Fangli Zhang</a></p></div>
+<!--    <div class='modal-body'><p>Join CANDY and make friends in real life!</p><p>Try to collect a candy by answering its question. Then you will get the clue to find the real candy hidden by another CANDY fans!</p> <p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='http://www.charlottesville.org/online-services/maps-and-gis-data'>City of Charlottesville</a></p><p>Wanna make CANDY better? Please let me know! >> <a href='mailto:fz2vf@virginia.edu'>Fangli Zhang</a></p></div>-->
     
     <button class='close-button'>&times;</button>  <!-- A special "x" character (the multiply sign) used in close buttons -->  
   </div>
   <div id="screen"></div> <!-- Black overlay behind the modal -->
 
-  <!-- color change selector -->
-<!--
-  <div class='map-overlay' id='color-changer'>
-    <div>
-      <label>Bus stops:</label>
-      <div id='swatches'></div>
-    </div>
-  </div>
--->
-
-  <!-- Map legend (populated by javascript code) -->
-<!--  <div class='map-overlay' id='legend'></div>-->
-
-  <!-- Info window (populated by javascript code from the Mapbox map layers) -->
-<!--
-  <div class='map-overlay' id='info-window'>
-    <div>
-      <h2>Get this Candy!</h2>
-      <div id='info-window-body'>
-        <p>Hover over a candy or click on a candy to learn more about it.</p>
-      </div>
-    </div>
-  </div>
--->
-
-    <!-- Layers control (populated by javascript code) -->
   
 
-</body>
-<!-- Link to our custom javascript, must be placed at the end of the index.html file -->  
-    
-    
-    <!--    --------------------------slideshow-------------------------------------->
 
-<div class="slideshow-container" style="width:300px; height:300px" >
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <center><img src="img/Ferrero.png" style="height:70%;"></center>
-  <div class="text">FERRERO</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <center><img src="img/Hershey.png" style="height:70%;"></center>
-  <div class="text">HERSHEY'S</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <center><img src="img/Bear_1.png" style="height:70%;"></center>
-  <div class="text">GUMMY BEAR</div>
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <center><img src="img/white_rabbit.svg" style="height:70%;"></center>
-
-  <div class="text">WHITE RABBIT</div>
-</div>
-    
-<div id= layers-control> </div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-    
-<!-- sideslide   ---------------------------------------------->
-    
-<!--<div id="flip">Click to slide the panel down or up</div>-->
-<!--<div id="panel">Hello world!</div>-->
-    
 <!-- <div class="pollSlider"></div>-->
 <div id="pollSlider-button"> 
-    <div id="pollSlider-button-text"><p><img src="img/Bear_4.png" style="width:5%"> &nbsp;&nbsp; CANDY JAR</p>
+    <div id="pollSlider-button-text"><p><img src="img/Bear_4.png" style="width:5%"> &nbsp;&nbsp; TODAY'S CANDY</p>
     </div>
 </div>
     
     
- <!------------------------slider-------------------------->   
- 
+ <!------------------------scroll-------------------------->   
+    
+<div id="fadeBackground">
+</div>
+<div id="candyList">
+  <div id="candy-ferrero" class="candyShow active">
+    <img src="img/Ferrero.png" style="width:25%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FERRERO
+    </div>
+  <div id="candy-hersheys" class="candyShow active">
+    <img src="img/Hershey.png" style="width:25%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HERSHEY'S
+    </div>
+  <div id="candy-bear" class="candyShow active">
+    <img src="img/Bear_1.png" style="width:25%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GUMMY BEAR
+    </div>
+  <div id="candy-rabbit" class="candyShow active">
+    <img src="img/white_rabbit.svg" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHITE RABBIT
+    </div>
+<!--
+  <div class="candyShow">
+    <img src="img/MM_1.svg" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&M's
+    </div>
+  <div class="candyShow">
+    <img src="img/Ferrero.png" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FERRERO
+    </div>
+  <div class="candyShow">
+    <img src="img/Hershey.png" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HERSHEY'S
+    </div>
+  <div class="candyShow">
+    <img src="img/Bear_1.png" style="width:25%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GUMMY BEAR
+    </div>
+  <div class="candyShow">
+    <img src="img/white_rabbit.svg" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHITE RABBIT
+    </div>
+  <div class="candyShow">
+    <img src="img/MM_1.svg" style="width:30%;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&M's
+    </div>
+-->
+<!--
+  <div class="fade">Fade In 05</div>
+  <div class="fade">Fade In 06</div>
+  <div class="fade">Fade In 07</div>
+  <div class="fade">Fade In 08</div>
+  <div class="fade">Fade In 09</div>
+  <div class="fade">Fade In 10</div>
+-->
+</div>
+
+<!--
+<div id="fadeBackground">
+    fade background
+</div>
+-->
+
     
 <script src="map.js"></script>
 
 
-    
-  
-<!--    ------------------slide shift-------------------->
-    
-<!--
-    <script language="javascript" type="text/javascript">
-    //In pixels
-    var amountToMoveTotal = 1000;
-    var amountToMovePerStep = 10;
-    //In milliseconds
-    var timeToWaitBeforeNextIncrement = 20;
-
-    var amountToFadeTotal = 1.0;
-    var amountToFadePerStep = 0.01;
-</script>
-
-<p>This one moves right on hover</p>
-<img onmouseover="moveRight(this, amountToMoveTotal, amountToMovePerStep, timeToWaitBeforeNextIncrement)" src="http://www.w3schools.com/jsref/smiley.gif" style="left:0px;top:50px;position:absolute;opacity:1.0;">
-<br><br>
-<p>This one fades in on hover</p>
-<img onmouseover="fadeIn(this, amountToFadeTotal, amountToFadePerStep, timeToWaitBeforeNextIncrement)" src="http://www.w3schools.com/jsref/smiley.gif" style="left:0px;top:150px;position:absolute;opacity:0.1;">
--->
-    
-
-
-</script>
-    
 </html>
